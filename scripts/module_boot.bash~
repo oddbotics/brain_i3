@@ -5,4 +5,4 @@ export ROS_MASTER_URI=http://oddbot:11311
 export ROS_HOSTNAME=oddbot
 
 
-roslaunch brain_i3 module.launch 
+roslaunch oddbot_boot module.launch 
