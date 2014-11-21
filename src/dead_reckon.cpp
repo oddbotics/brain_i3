@@ -10,6 +10,10 @@ dead_reckon::dead_reckon() {
 	lastpos.linear.x = 0;
  	lastpos.linear.y = 0;
 	int actionpos = 0;
+	actions[0].linear.x = 1000;
+	actions[0].linear.y = 1000;
+	actions[1].linear.x = 1100;
+	actions[1].linear.y = 900;
 }
 
 void dead_reckon::check_dist(const geometry_msgs::Twist::ConstPtr& dist_msg) {
@@ -25,8 +29,11 @@ void dead_reckon::check_dist(const geometry_msgs::Twist::ConstPtr& dist_msg) {
 void dead_reckon::hit_target(){
 	lastpos.linear.x = target.linear.x;
 	lastpos.linear.y = target.linear.y;
-	target.linear.x = actions[++actionpos].linear.x + lastpos.linear.x;
-	target.linear.y = actions[actionpos].linear.y + lastpos.linear.y;
+	if (actions[++actionpos].linear.x || actions[actionpos].linear.y)
+	{
+		target.linear.x = actions[actionpos].linear.x + lastpos.linear.x;
+		target.linear.y = actions[actionpos].linear.y + lastpos.linear.y;
+	}
 }
 
 
