@@ -15,8 +15,9 @@ dead_reckon::dead_reckon() {
 	actions[0].linear.y = 1000;
 	//Circle of turn is approx 1020 mm circumference
         //90 deg is +-255 for each wheel
-	actions[1].linear.x = 1255;
-	actions[1].linear.y = 745;
+		// 135 deg is +-382 for each wheel
+	actions[1].linear.x = 1382;
+	actions[1].linear.y = 617;
 }
 
 void dead_reckon::check_dist(const geometry_msgs::Twist::ConstPtr& dist_msg) {
