@@ -14,8 +14,11 @@ private:
  ros::Subscriber dist_sub;
 public:
 	dead_reckon();
-	void check_dist();
+	void check_dist(const geometry_msgs::Twist::ConstPtr& dist_msg);
 	void hit_target();
-}
+};
 
 int main(int argc, char** argv);
+
+
+#endif

@@ -107,6 +107,8 @@ include_directories(include
 
 ## Declare a cpp executable
 add_executable(oddbot_boot_brain src/oddbot_boot_brain.cpp)
+add_executable(dead_reckon src/dead_reckon.cpp)
+
 add_executable(oddbot_brain_loctest src/oddbot_brain_loctest.cpp)
 
 ## Add cmake target dependencies of the executable/library
@@ -115,6 +117,9 @@ add_executable(oddbot_brain_loctest src/oddbot_brain_loctest.cpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(oddbot_boot_brain
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(dead_reckon
   ${catkin_LIBRARIES}
 )
 target_link_libraries(oddbot_brain_loctest

@@ -15,7 +15,10 @@ private:
 public:
 	dead_reckon();
 	void check_dist();
-	void send_dist_cmd();
-}
+	void hit_target();
+};
 
 int main(int argc, char** argv);
+
+
+#endif
