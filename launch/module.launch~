@@ -1,8 +1,0 @@
-<launch>    
-    <arg name="node_name" default="ip" />
-    
-    <node pkg="oddbot_boot" type="oddbot_boot_brain" output="screen">
-    
-    </node>
-
-</launch>

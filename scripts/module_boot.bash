@@ -4,5 +4,5 @@ source /home/oddbot/catkin_ws/devel/setup.bash
 export ROS_MASTER_URI=http://oddbot:11311
 export ROS_HOSTNAME=oddbot
 
-
+roscore
 roslaunch brain_i3 module.launch 
